@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+
+<h1> This is my home page</h1>
+<h3><a href = "{% url 'viewall' %}"> Click there to get all student info </a></h3>
+{%  for student in all %}
+    <div>
+        {% comment %} <h4>student name is {{student.fname}} </h4> {% endcomment %}
+        <p>First name of student : {{ student.fname }}</p>
+        <h5><a href="{% url 'studentinfo' student.id %}">click here to view full info</a> </h5>
+    </div>
+{% endfor %}
+
+{% endblock content %}

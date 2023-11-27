@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h2>DISPLAY PAGE</h2>
+<h3>Display the names of student and thier address</h3>
+ 
+<table border="1px solid grey" width="400px" height="120px">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>ROOM</td>
+            <td>VIEW</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for room in rooms %}
+        <tr>
+            <td>{{room.id}}</td>
+            <td>{{room.name}}</td>
+            <td>{{room.room}}</td>
+            <td><a href="{% url 'room' room.id %}">Click there</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>   for dapp 
+</table>
+
+{% endblock content%} 

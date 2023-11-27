@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+<form method="POST" action=""> 
+    {% csrf_token %}
+    <input type="text" placeholder="First name" name="fname"><br>
+    <input type="text" name="lname"  placeholder="Last name"><br>
+    <input type="text" name="address"  placeholder="Home address"><br>
+    <input type="number" name="age"  placeholder="Age"><br>
+    <button>Submit</button>
+</form>
+
+{{ message }}
+{% endblock content %}

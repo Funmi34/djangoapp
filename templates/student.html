@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+{% block content %}
+
+<b></b>
+<p> Student info page {{ student.name }}</p>
+
+
+
+<table border = "1px solid black " width= "1300px" height= "100px">
+   <thead>
+    <tr> 
+        <td>ID</td>
+        <td>FIRST NAME</td>
+        <td>LAST NAME</td>
+        <td>ADDRESS</td>
+        <td>AGE</td>
+        <td>CREATED</td>
+        <td>NIN</td>
+        <td>UPDATE</td>
+        <td>ATM</td>
+     </tr>
+   </thead>
+  
+        <tr> 
+            <td>{{ student.id }}</td>
+            <td>{{ student.fname }}</td>
+            <td>{{ student.lname }}</td>
+            <td>{{ student.address }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.created_at }}</td>
+            <td>{{ student.nin }}</td>
+            <td>{{ student.updated_at }}</td>
+            <td>{{ student.atm }}</td>
+        </tr>
+
+</table
+
+{% endblock content %}

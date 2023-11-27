@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h2>VIEW ALL THE BIO TABLE OF STUDENTS IN THE DATABASE</h2>
+
+<table border = "1px solid black " width= "1300px" height= "100px">
+    
+    <thead>
+     <tr> 
+         <td>ID</td>
+         <td>FIRST NAME</td>
+         <td>LAST NAME</td>
+         <td>ADDRESS</td>
+         <td>AGE</td>
+         <td>CREATED</td>
+         <td>NIN</td>
+         <td>UPDATE</td>
+         <td>ATM</td>
+         <td>VIEW</td>
+      </tr>
+    </thead> 
+   <tbody>
+    {% for all in all %}
+         <tr> 
+             <td>{{ all.id }}</td>
+             <td>{{ all.fname }}</td>
+             <td>{{ all.lname }}</td>
+             <td>{{ all.address }}</td>
+             <td>{{ all.age }}</td>
+             <td>{{ all.created_at }}</td>
+             <td>{{ all.nin }}</td>
+             <td>{{ all.updated_at }}</td>
+             <td>{{ all.atm }}</td>
+             <td><a href="{% url 'studentinfo' all.id %}">click here to view full info</a> </td>
+         </tr>
+         {% endfor %}
+        </tbody>     
+ </table 
+
+{% endblock content %}
